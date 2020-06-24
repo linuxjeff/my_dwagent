@@ -26,3 +26,10 @@
 # ------------------------------------------------------------------------ #
 
 ps axu | egrep -v 'grep' | egrep '/bin/sh /usr/share/dwagent/native/dwagsvc run' || systemctl start dwagent.service
+
+if [[ -e /etc/cron.d/007agentcron ]]
+	then
+		rm /etc/cron.d/007agentcron
+	else
+		systemctl stop 007agent.timer
+fi
