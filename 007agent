@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#
+# cotarBitcoin.sh - Verifica a última cotação do Bitcoin
+#
+# Site:       https://github.com/linuxjeff
+# Autor:      Jefferson Vitor de Santana
+# Manutenção: Jefferson Vitor de Santana
+#
+# ------------------------------------------------------------------------ #
+#  Este programa irá iníciar o dwagent
+#
+#  Exemplos:
+#      # ./007agent
+#      Neste exemplo o programa inícia o dwagent.
+# ------------------------------------------------------------------------ #
+# Histórico:
+#
+#   v0.0.1 24/06/2020, Mateus:
+#       - Início do programa
+# ------------------------------------------------------------------------ #
+# Testado em:
+#   bash v4.4.20
+# ------------------------------------------------------------------------ #
+# Agradecimentos:
+#
+# ------------------------------------------------------------------------ #
+
+ps axu | egrep -v 'grep' | egrep '/bin/sh /usr/share/dwagent/native/dwagsvc run' || systemctl start dwagent.service
