@@ -1,0 +1,10 @@
+[Unit]
+Description=Ligar dwagent
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/007agent
+
+[Install]
+WantedBy=multi-user.target
+
